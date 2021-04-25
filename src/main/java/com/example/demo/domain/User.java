@@ -1,25 +1,37 @@
 package com.example.demo.domain;
-
 /**
- * Created by UCMED on 2017/5/12.
+ *
+ * @author 程序猿DD
+ * @version 1.0.0
+ * @blog http://blog.didispace.com
  */
 public class User {
-    private String userName;
-    private String passWord;
 
-    public String getUserName() {
-        return userName;
+    private Long id;
+    private String name;
+    private Integer age;
+
+    public Long getId() {
+        return id;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setId(Long id) {
+        this.id = id;
     }
 
-    public String getPassWord() {
-        return passWord;
+    public String getName() {
+        return name;
     }
 
-    public void setPassWord(String passWord) {
-        this.passWord = passWord;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
     }
 }
