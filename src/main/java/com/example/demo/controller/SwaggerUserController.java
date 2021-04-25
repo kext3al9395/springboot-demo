@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.*;
 import java.util.*;
 
 /**
+ * 添加文档内容
+ *
+ * 通过@ApiOperation注解来给API增加说明、通过@ApiImplicitParams、@ApiImplicitParam注解来给参数增加说明。
  * Created by lisen on 2017/6/28.
  */
 @RestController
