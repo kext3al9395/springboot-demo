@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 import com.example.demo.domain.User;
+import org.apache.log4j.Logger;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.*;
@@ -11,6 +12,9 @@ import java.util.*;
 @RestController
 @RequestMapping("/users")
 public class UserController {
+
+    private static final Logger LOG = Logger.getLogger(UserController.class);
+
     //创建线程安全的map
     static Map<Long, User> users = Collections.synchronizedMap(new HashMap<Long, User>());
 
@@ -20,6 +24,7 @@ public class UserController {
      */
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public List<User> getUserList() {
+        LOG.info("---------------------------------");
         List<User> r = new ArrayList<User>(users.values());
         return r;
     }

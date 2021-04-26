@@ -37,8 +37,8 @@ public class DemoApplicationTests {
 
 		RequestBuilder request = null;
 		//1.get查找一下user列表，应该为空
-//		request = get("/users/");
-//		mvc.perform(request).andExpect(status().isOk()).andExpect(content().string(equalTo("[]")));
+		request = get("/users/");
+		mvc.perform(request).andExpect(status().isOk()).andExpect(content().string(equalTo("[]")));
 
 		// 2、post提交一个user
 		request = post("/users/")
