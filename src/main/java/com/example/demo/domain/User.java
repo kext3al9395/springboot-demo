@@ -1,11 +1,16 @@
 package com.example.demo.domain;
+
+import java.io.Serializable;
+
 /**
  *
  * @author 程序猿DD
  * @version 1.0.0
  * @blog http://blog.didispace.com
  */
-public class User {
+public class User implements Serializable{
+
+    private static final long serialVersionUID = -1L;
 
     private Long id;
     private String name;
